@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E88486AE-F3C0-4316-B2BB-415A3379A28C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97DD95AB-58DF-4FA6-B7FF-0CD494317068"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sticker/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90E37C5C-B989-4737-B735-FB73688FBA2D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sticker/ProcessImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "addOverlayToWebPAndSave(url:overlayColor:size:completion:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "90E37C5C-B989-4737-B735-FB73688FBA2D - cf3b45c360903e5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sticker.addOverlayToWebPAndSave(url: Swift.Optional&lt;Foundation.URL&gt;, overlayColor: __C.UIColor, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Sticker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gokul/projects/Sticker/Sticker/ProcessImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "90E37C5C-B989-4737-B735-FB73688FBA2D - 45c9ec9bc2be68a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Bool, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Sticker.addOverlayToWebPAndSave(url: Swift.Optional&lt;Foundation.URL&gt;, overlayColor: __C.UIColor, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Sticker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gokul/projects/Sticker/Sticker/ProcessImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "90E37C5C-B989-4737-B735-FB73688FBA2D - cf3b45c360903e18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sticker.addOverlayToWebPAndSave(url: Swift.Optional&lt;Foundation.URL&gt;, overlayColor: __C.UIColor, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Sticker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gokul/projects/Sticker/Sticker/ProcessImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "90E37C5C-B989-4737-B735-FB73688FBA2D - 45c9ec9bc2be6867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Bool, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Sticker.addOverlayToWebPAndSave(url: Swift.Optional&lt;Foundation.URL&gt;, overlayColor: __C.UIColor, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Sticker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gokul/projects/Sticker/Sticker/ProcessImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "495AA778-6D96-4930-A5A8-F1B255783BB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sticker/ProcessImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "addOverlayToWebPAndSave(url:overlayColor:size:completion:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "495AA778-6D96-4930-A5A8-F1B255783BB6 - cf3b45c360903e18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sticker.addOverlayToWebPAndSave(url: Swift.Optional&lt;Foundation.URL&gt;, overlayColor: __C.UIColor, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Sticker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gokul/projects/Sticker/Sticker/ProcessImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "495AA778-6D96-4930-A5A8-F1B255783BB6 - 45c9ec9bc2be6867"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Bool, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in Sticker.addOverlayToWebPAndSave(url: Swift.Optional&lt;Foundation.URL&gt;, overlayColor: __C.UIColor, completion: (Foundation.URL) -&gt; ()) -&gt; ()"
+                  moduleName = "Sticker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gokul/projects/Sticker/Sticker/ProcessImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
