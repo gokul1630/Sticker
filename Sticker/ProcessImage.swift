@@ -6,9 +6,22 @@
 
 import UIKit
 import SDWebImage
+import AVFoundation
 import SDWebImageWebPCoder
 
-func addOverlayToWebPAndSave(url: URL?, overlayColor: UIColor, size: Int, completion: @escaping (URL) -> Void)  {
+func extractExtension(_ response: SDImageFormat) -> String {
+    switch response.rawValue {
+    case 1:
+        return ".png"
+    case 4:
+        return ".webp"
+    default:
+        return ".jpeg"
+    }
+
+   }
+
+func addOverlay(url: URL?, overlayColor: UIColor, size: CGFloat, type: SDImageFormat, completion: @escaping (Data?) -> Void)  {
     SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
     
     SDWebImageManager.shared.loadImage(with: url, options: [], progress: nil){(image, _, error, _, _, _) in
@@ -19,28 +32,29 @@ func addOverlayToWebPAndSave(url: URL?, overlayColor: UIColor, size: Int, comple
             return
         }
        
-        debugPrint(image.size.width, image.size.height)
+        let canvasSize = CGSize(width: size, height: size)
+
+           let context = UIGraphicsImageRenderer(size: canvasSize)
+
+           let canvasImage = context.image { context in
+
+               UIColor.clear.setFill()
+               context.fill(CGRect(origin: .zero, size: canvasSize))
+
+               
+               let squareRect = CGRect(origin: .zero, size: canvasSize)
+               
+               let aspect = AVMakeRect(aspectRatio: image.size, insideRect: squareRect)
+               
+               image.draw(in: aspect)
+           }
         
-            guard let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
-                return
+        
+        if let imageData = canvasImage.sd_imageData(as: type) {
+            completion(imageData)
+            return
             }
-        
-            
-            let uniqueFileName = ProcessInfo.processInfo.globallyUniqueString
-            let resultImageURL = cacheDirectory.appendingPathComponent("\(uniqueFileName).png")
-        
-           
-        if let imageData = image.pngData() {
-                do {
-                    try imageData.write(to: resultImageURL)
-                    completion(resultImageURL)
-                } catch {
-                    print("Error saving image data: \(error)")
-                    return
-                }
-            } else {
-                return
-            }
+        completion(nil)
     }
 
 
