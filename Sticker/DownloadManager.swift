@@ -6,7 +6,7 @@
 //
 import Foundation
 
-class DownloadManager{
+class DownloadManager {
     
     static func extractExtension(response: URLResponse?) -> String {
         guard let response = response else {
@@ -24,44 +24,36 @@ class DownloadManager{
            return "webp"
        }
 
-    static func downloadFile(fileUrl url: String, completion: @escaping (URL?) -> Void) {
-       let fileUrl = URL(string: url)!
-       var destinationURL: URL? = nil
-       
-       let task = URLSession.shared.downloadTask(with: fileUrl) { (location, response, error) in
-           guard error == nil else {
-               debugPrint(error!)
-               completion(nil)
-               return
-           }
-           
-           guard let location = location else {
-              debugPrint(error!)
-               completion(nil)
-               return
-           }
-           
-           do {
-               let randomFileName = UUID().uuidString
-               let tempDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
-               
-               guard let response = response else {
-                   debugPrint(error!)
-                   completion(nil)
-                   return
-               }
-               
-               destinationURL = tempDirectory.appendingPathExtension("\(randomFileName).\(DownloadManager.extractExtension(response: response))")
-               
-               
-               try FileManager.default.moveItem(at: location, to: destinationURL!)
-               completion(destinationURL)
-
-           } catch {
-               debugPrint(error)
-               completion(nil)
-           }
-       }
-       task.resume()
-   }
+  static func download<T: Codable>(_ model: T.Type, url: String, completion: @escaping (T?, _ error: Error?) -> Void) -> Void {
+        let url = URL(string: url)
+        guard let url = url else {
+            debugPrint("Error while unwrapping url")
+            return
+        }
+        
+        let urlSession = URLSession.shared
+        let task = urlSession.dataTask(with: url){ (data, response, error) -> Void in
+            
+            if error != nil {
+                debugPrint("Error decoing data: ", error!)
+                completion(nil, error)
+                return
+            }
+            
+            do{
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let data: T = try decoder.decode(T.self, from: data)
+                    completion(data, nil)
+                    return
+                }
+                completion(nil, nil)
+            } catch {
+                debugPrint("Error on api: ", error)
+            }
+        }
+        
+        task.resume()
+    }
 }
