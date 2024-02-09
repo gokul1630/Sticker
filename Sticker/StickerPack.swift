@@ -182,9 +182,9 @@ class StickerPack {
 	 *    into a format that WhatsApp can read and WhatsApp is about to open. Called on the main
 	 *    queue.
 	 */
-	func sendToWhatsApp(completionHandler: @escaping (Bool) -> Void) {
+    func sendToWhatsApp(data: [Data], completionHandler: @escaping (Bool) -> Void) {
 		StickerPackManager.queue.async {
-			var json: [String: Any] = [:]
+            var json: [String: Any] = [:]
 			json["identifier"] = self.identifier
 			json["name"] = self.name
 			json["publisher"] = self.publisher
@@ -194,17 +194,10 @@ class StickerPack {
 			}
 			
 			var stickersArray: [[String: Any]] = []
-			for sticker in self.stickers {
+			for sticker in data {
 				var stickerDict: [String: Any] = [:]
-				
-				if let imageData = sticker.imageData.webpData {
-					stickerDict["image_data"] = imageData.base64EncodedString()
-				} else {
-					print("Skipping bad sticker data")
-					continue
-				}
-				
-				stickerDict["emojis"] = sticker.emojis
+					stickerDict["image_data"] = sticker.base64EncodedString()
+				stickerDict["emojis"] = []
 				
 				stickersArray.append(stickerDict)
 			}
