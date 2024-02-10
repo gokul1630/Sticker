@@ -7,22 +7,6 @@
 import Foundation
 
 class DownloadManager {
-    
-    static func extractExtension(response: URLResponse?) -> String {
-        guard let response = response else {
-            return ""
-        }
-           if (response.mimeType == "image/png") {
-               return "png"
-           }
-           if (response.mimeType == "image/jpeg") {
-               return "jpeg"
-           }
-           if (response.mimeType == "image/webp") {
-               return "webp"
-           }
-           return "webp"
-       }
 
   static func download<T: Codable>(_ model: T.Type, url: String, completion: @escaping (T?, _ error: Error?) -> Void) -> Void {
         let url = URL(string: url)

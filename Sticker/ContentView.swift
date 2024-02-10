@@ -226,6 +226,8 @@ actor StickerActor{
 
 
 func sendToWhatsApp(stickers: [String], packName: String) {
+    let processImage = ProcessImage()
+
     let stickerSize: CGFloat = 170.6
 
     let trayIconSize: CGFloat = 32
@@ -250,7 +252,7 @@ func sendToWhatsApp(stickers: [String], packName: String) {
             
             
             if let imageUrl = URL(string: stickerUrl) {
-                addOverlay(url: imageUrl, overlayColor: .cyan, size: stickerSize, type: .webP) { stickerData in
+                processImage.addOverlay(url: imageUrl, overlayColor: .cyan, size: stickerSize, type: .webP) { stickerData in
                     
                     defer { dispatchGroup.leave() }
                     
@@ -268,7 +270,7 @@ func sendToWhatsApp(stickers: [String], packName: String) {
         dispatchGroup.enter()
         
         if let imageUrl = URL(string: stickers[0]) {
-            addOverlay(url: imageUrl, overlayColor: .cyan, size: trayIconSize, type: .PNG) { stickerData in
+            processImage.addOverlay(url: imageUrl, overlayColor: .cyan, size: trayIconSize, type: .PNG) { stickerData in
                 
                 defer { dispatchGroup.leave() }
                 
@@ -284,7 +286,7 @@ func sendToWhatsApp(stickers: [String], packName: String) {
                 let stickerPack = try StickerPack(
                     identifier: "com.test.sticker",
                     name: packName,
-                    publisher: "Telegram",
+                    publisher: "gokul",
                     trayImagePNGData: thumbData!,
                     animatedStickerPack: false,
                     publisherWebsite: "",
