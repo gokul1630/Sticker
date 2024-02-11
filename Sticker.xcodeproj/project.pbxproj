@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		551155DD2B64D9EB00BC8144 /* SDWebImageWebPCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 551155DC2B64D9EB00BC8144 /* SDWebImageWebPCoder */; };
+		554C04CF2B6691C300E6F223 /* Telegram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C04CE2B6691C300E6F223 /* Telegram.swift */; };
+		554C04D22B6695DD00E6F223 /* ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C04D12B6695DD00E6F223 /* ApiCalls.swift */; };
 		5584823A2B66063A00EE709B /* Limits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558482342B66063A00EE709B /* Limits.swift */; };
 		5584823B2B66063A00EE709B /* StickerPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558482352B66063A00EE709B /* StickerPack.swift */; };
 		5584823C2B66063A00EE709B /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558482362B66063A00EE709B /* Sticker.swift */; };
@@ -15,28 +16,36 @@
 		5584823E2B66063A00EE709B /* Interoperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558482382B66063A00EE709B /* Interoperability.swift */; };
 		5584823F2B66063A00EE709B /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558482392B66063A00EE709B /* ImageData.swift */; };
 		559017492B64CBB4003F2FDE /* ProcessImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559017482B64CBB4003F2FDE /* ProcessImage.swift */; };
-		5590174C2B64D143003F2FDE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5590174B2B64D143003F2FDE /* SDWebImage */; };
 		559515072B638EAE0055DC5C /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559515062B638EAE0055DC5C /* DownloadManager.swift */; };
 		55A357202B58BAAD00650543 /* StickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3571F2B58BAAD00650543 /* StickerApp.swift */; };
-		55A357222B58BAAD00650543 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A357212B58BAAD00650543 /* ContentView.swift */; };
+		55A357222B58BAAD00650543 /* Stickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A357212B58BAAD00650543 /* Stickers.swift */; };
 		55A357242B58BAB700650543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A357232B58BAB700650543 /* Assets.xcassets */; };
 		55A357272B58BAB700650543 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A357262B58BAB700650543 /* Preview Assets.xcassets */; };
+		55B4DDF92B7883430072759E /* SwiftWebP in Frameworks */ = {isa = PBXBuildFile; productRef = 55B4DDF82B7883430072759E /* SwiftWebP */; };
+		55E5BA722B789F280093B525 /* StickerPackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E5BA712B789F280093B525 /* StickerPackList.swift */; };
+		55E5BA742B789F6A0093B525 /* StickerPacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E5BA732B789F6A0093B525 /* StickerPacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		554C04CE2B6691C300E6F223 /* Telegram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telegram.swift; sourceTree = "<group>"; };
+		554C04D12B6695DD00E6F223 /* ApiCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCalls.swift; sourceTree = "<group>"; };
 		558482342B66063A00EE709B /* Limits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limits.swift; sourceTree = "<group>"; };
 		558482352B66063A00EE709B /* StickerPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPack.swift; sourceTree = "<group>"; };
 		558482362B66063A00EE709B /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
 		558482372B66063A00EE709B /* StickerPackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackManager.swift; sourceTree = "<group>"; };
 		558482382B66063A00EE709B /* Interoperability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interoperability.swift; sourceTree = "<group>"; };
 		558482392B66063A00EE709B /* ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		558482402B6616D500EE709B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		559017482B64CBB4003F2FDE /* ProcessImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessImage.swift; sourceTree = "<group>"; };
 		559515062B638EAE0055DC5C /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		55A3571C2B58BAAD00650543 /* Sticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A3571F2B58BAAD00650543 /* StickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerApp.swift; sourceTree = "<group>"; };
-		55A357212B58BAAD00650543 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55A357212B58BAAD00650543 /* Stickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stickers.swift; sourceTree = "<group>"; };
 		55A357232B58BAB700650543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55A357262B58BAB700650543 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55E5BA712B789F280093B525 /* StickerPackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackList.swift; sourceTree = "<group>"; };
+		55E5BA732B789F6A0093B525 /* StickerPacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StickerPacks.swift; path = Sticker/StickerPacks.swift; sourceTree = SOURCE_ROOT; };
+		55E5BA752B78B72C0093B525 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +53,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551155DD2B64D9EB00BC8144 /* SDWebImageWebPCoder in Frameworks */,
-				5590174C2B64D143003F2FDE /* SDWebImage in Frameworks */,
+				55B4DDF92B7883430072759E /* SwiftWebP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		554C04CD2B6691AD00E6F223 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				554C04CE2B6691C300E6F223 /* Telegram.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		554C04D02B6695CA00E6F223 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				554C04D12B6695DD00E6F223 /* ApiCalls.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		55A357132B58BAAD00650543 = {
 			isa = PBXGroup;
 			children = (
+				55E5BA752B78B72C0093B525 /* Config.xcconfig */,
 				55A3571E2B58BAAD00650543 /* Sticker */,
 				55A3571D2B58BAAD00650543 /* Products */,
 			);
@@ -71,6 +96,10 @@
 		55A3571E2B58BAAD00650543 /* Sticker */ = {
 			isa = PBXGroup;
 			children = (
+				554C04CD2B6691AD00E6F223 /* Model */,
+				554C04D02B6695CA00E6F223 /* ViewModel */,
+				55E5BA702B789E950093B525 /* Views */,
+				558482402B6616D500EE709B /* Info.plist */,
 				558482392B66063A00EE709B /* ImageData.swift */,
 				558482382B66063A00EE709B /* Interoperability.swift */,
 				558482342B66063A00EE709B /* Limits.swift */,
@@ -78,7 +107,6 @@
 				558482352B66063A00EE709B /* StickerPack.swift */,
 				558482372B66063A00EE709B /* StickerPackManager.swift */,
 				55A3571F2B58BAAD00650543 /* StickerApp.swift */,
-				55A357212B58BAAD00650543 /* ContentView.swift */,
 				559515062B638EAE0055DC5C /* DownloadManager.swift */,
 				559017482B64CBB4003F2FDE /* ProcessImage.swift */,
 				55A357232B58BAB700650543 /* Assets.xcassets */,
@@ -93,6 +121,16 @@
 				55A357262B58BAB700650543 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55E5BA702B789E950093B525 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55A357212B58BAAD00650543 /* Stickers.swift */,
+				55E5BA732B789F6A0093B525 /* StickerPacks.swift */,
+				55E5BA712B789F280093B525 /* StickerPackList.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,8 +150,7 @@
 			);
 			name = Sticker;
 			packageProductDependencies = (
-				5590174B2B64D143003F2FDE /* SDWebImage */,
-				551155DC2B64D9EB00BC8144 /* SDWebImageWebPCoder */,
+				55B4DDF82B7883430072759E /* SwiftWebP */,
 			);
 			productName = Sticker;
 			productReference = 55A3571C2B58BAAD00650543 /* Sticker.app */;
@@ -144,8 +181,7 @@
 			);
 			mainGroup = 55A357132B58BAAD00650543;
 			packageReferences = (
-				5590174A2B64D143003F2FDE /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				551155DB2B64D9EB00BC8144 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */,
+				55B4DDF72B7883420072759E /* XCRemoteSwiftPackageReference "SwiftWebP" */,
 			);
 			productRefGroup = 55A3571D2B58BAAD00650543 /* Products */;
 			projectDirPath = "";
@@ -175,13 +211,17 @@
 			files = (
 				5584823B2B66063A00EE709B /* StickerPack.swift in Sources */,
 				5584823E2B66063A00EE709B /* Interoperability.swift in Sources */,
+				55E5BA722B789F280093B525 /* StickerPackList.swift in Sources */,
+				554C04CF2B6691C300E6F223 /* Telegram.swift in Sources */,
+				55E5BA742B789F6A0093B525 /* StickerPacks.swift in Sources */,
 				5584823A2B66063A00EE709B /* Limits.swift in Sources */,
 				5584823F2B66063A00EE709B /* ImageData.swift in Sources */,
 				5584823D2B66063A00EE709B /* StickerPackManager.swift in Sources */,
-				55A357222B58BAAD00650543 /* ContentView.swift in Sources */,
+				55A357222B58BAAD00650543 /* Stickers.swift in Sources */,
 				55A357202B58BAAD00650543 /* StickerApp.swift in Sources */,
 				559017492B64CBB4003F2FDE /* ProcessImage.swift in Sources */,
 				5584823C2B66063A00EE709B /* Sticker.swift in Sources */,
+				554C04D22B6695DD00E6F223 /* ApiCalls.swift in Sources */,
 				559515072B638EAE0055DC5C /* DownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +359,7 @@
 				DEVELOPMENT_TEAM = D48498VPR2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sticker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,6 +389,7 @@
 				DEVELOPMENT_TEAM = D48498VPR2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sticker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -390,34 +432,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		551155DB2B64D9EB00BC8144 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */ = {
+		55B4DDF72B7883420072759E /* XCRemoteSwiftPackageReference "SwiftWebP" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageWebPCoder";
+			repositoryURL = "https://github.com/alfianlosari/SwiftWebP.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.2;
-			};
-		};
-		5590174A2B64D143003F2FDE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.18.10;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		551155DC2B64D9EB00BC8144 /* SDWebImageWebPCoder */ = {
+		55B4DDF82B7883430072759E /* SwiftWebP */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 551155DB2B64D9EB00BC8144 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */;
-			productName = SDWebImageWebPCoder;
-		};
-		5590174B2B64D143003F2FDE /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5590174A2B64D143003F2FDE /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
+			package = 55B4DDF72B7883420072759E /* XCRemoteSwiftPackageReference "SwiftWebP" */;
+			productName = SwiftWebP;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

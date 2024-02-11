@@ -5,48 +5,67 @@
 //  Created by Gokulprasanth on 27/01/24.
 
 import UIKit
-import SDWebImage
 import AVFoundation
-import SDWebImageWebPCoder
+import SwiftWebP
+
+enum ImageFormat {
+    case webp, png
+}
 
 class ProcessImage {
+    private var downloadManager: DownloadManager
+    
     init(){
-        SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
+        downloadManager = DownloadManager()
     }
     
-    func addOverlay(url: URL?, overlayColor: UIColor, size: CGFloat, type: SDImageFormat, completion: @escaping (Data?) -> Void)  {
-        
-        SDWebImageManager.shared.loadImage(with: url, options: [], progress: nil){(image, _, error, _, _, _) in
-            guard let image = image else {
-                debugPrint("Something went wrong on image")
-                return
-            }
-            
-            if let error = error{
+    func addOverlay(url: String, size: CGFloat, type:ImageFormat, completion: @escaping (Data?) -> Void)  {
+        downloadManager.download(url: url) { data, error in
+            if let error = error {
                 debugPrint("error :", error)
-            }
-            let canvasSize = CGSize(width: size, height: size)
-            
-            let context = UIGraphicsImageRenderer(size: canvasSize)
-            
-            let canvasImage = context.image { context in
-                
-                UIColor.clear.setFill()
-                context.fill(CGRect(origin: .zero, size: canvasSize))
-                
-                
-                let squareRect = CGRect(origin: .zero, size: canvasSize)
-                
-                let aspect = AVMakeRect(aspectRatio: image.size, insideRect: squareRect)
-                
-                image.draw(in: aspect)
-            }
-            
-            if let imageData = image.sd_imageData(as: type) {
-                completion(imageData)
                 return
             }
-            completion(nil)
+            
+            guard let data = data else {
+                print("No data received")
+                completion(nil)
+                return
+            }
+            
+            if let webPImage = UIImage(data: data) {
+                
+                
+                let canvasSize = CGSize(width: size, height: size)
+                
+                let context = UIGraphicsImageRenderer(size: canvasSize)
+                
+                let canvasImage = context.image { context in
+                    
+                    UIColor.clear.setFill()
+                    context.fill(CGRect(origin: .zero, size: canvasSize))
+                    
+                    
+                    let squareRect = CGRect(origin: .zero, size: canvasSize)
+                    
+                    let aspect = AVMakeRect(aspectRatio: webPImage.size, insideRect: squareRect)
+                    
+                    webPImage.draw(in: aspect)
+                }
+                
+                
+                if type == .png {
+                    if let imageData = canvasImage.pngData() {
+                        completion(imageData)
+                    }
+                    return
+                }
+                
+                if let webPData = WebPEncoder().encode(image: canvasImage) {
+                    completion(webPData)
+                    return
+                }
+                completion(nil)
+            }
         }
     }
 }
