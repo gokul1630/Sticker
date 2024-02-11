@@ -44,7 +44,7 @@
 		55A357232B58BAB700650543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55A357262B58BAB700650543 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55E5BA712B789F280093B525 /* StickerPackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackList.swift; sourceTree = "<group>"; };
-		55E5BA732B789F6A0093B525 /* StickerPacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StickerPacks.swift; path = Sticker/StickerPacks.swift; sourceTree = SOURCE_ROOT; };
+		55E5BA732B789F6A0093B525 /* StickerPacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StickerPacks.swift; path = Sticker/Views/StickerPacks.swift; sourceTree = SOURCE_ROOT; };
 		55E5BA752B78B72C0093B525 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

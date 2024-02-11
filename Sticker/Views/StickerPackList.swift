@@ -19,7 +19,7 @@ struct StickerPackList: View {
     var body: some View{
         Text(packName)
             .fontWeight(.semibold)
-            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .font(.title)
             .padding()
         ScrollView {
             LazyVGrid(columns: columns, alignment: .center){
