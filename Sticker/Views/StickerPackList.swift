@@ -74,9 +74,9 @@ struct StickerPackList: View {
 func sendToWhatsApp(stickers: [String], packName: String) {
     let processImage = ProcessImage()
     
-    let stickerSize: CGFloat = 170.6
+    let stickerSize: CGFloat = (512 / UIScreen.main.scale)
     
-    let trayIconSize: CGFloat = 32
+    let trayIconSize: CGFloat = (96 / UIScreen.main.scale)
     
     let dispatchGroup = DispatchGroup()
     
@@ -84,6 +84,7 @@ func sendToWhatsApp(stickers: [String], packName: String) {
     
     var stickerDatas: [Data] = []
     
+    // 102.4kb
     let maxStickerSize = 102400
     
     
