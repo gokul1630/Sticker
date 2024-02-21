@@ -110,9 +110,9 @@ func sendToWhatsApp(stickers: [String], packName: String) {
                 if let thumbData = thumbData {
                     do {
                         let stickerPack = try StickerPack(
-                            identifier: "com.test.sticker",
+                            identifier: Bundle.main.bundleIdentifier!,
                             name: packName,
-                            publisher: "gokul",
+                            publisher: "\"telegram sticker exporter for ios\"",
                             trayImagePNGData: thumbData,
                             animatedStickerPack: false,
                             publisherWebsite: "",
